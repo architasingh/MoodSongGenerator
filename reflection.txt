@@ -1,0 +1,14 @@
+Reflection
+
+Through this project, we learned how to use API keys to access information from a database. Although we had some prior 
+knowledge of Python, we were able to further our understanding by working on our program. We mainly worked with 
+dictionaries and became familiar with the functions that allowed us to add and access items. The most enjoyable part of the 
+project was messing around with the user input part. It was fun to put in different songs and see the results the generator 
+would produce. Initially, we wanted to do the project in Java but we weren't able to find a library that was easy to use in 
+the language. There were also some libraries that didn't function like they were supposed to because they were outdated and 
+Genius recently changed the way it allows developers to access information from their database. It was frustrating to spend so 
+much time trying to debug code that didn't even end up working because it wasn't updated. We spent some time going back and 
+forth between our options, but eventually, we settled on a Python library, and it ended up working well for our project. The 
+most helpful tool for our learning was probably the internet. There were very clear explanations on Python's basic data 
+structures and helpful functions on websites like https://www.w3schools.com/ and https://www.geeksforgeeks.org/. We were able 
+to quickly find answers to most of the questions we had about Python, enabling us to make quick progress while coding.

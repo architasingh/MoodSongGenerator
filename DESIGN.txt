@@ -1,0 +1,34 @@
+DESIGN
+
+Our project utilizes PyPi's lyricsgenius library as a primary function of being able to access song lyrics and data 
+within our program. It enables our search function and allows us to compile the actual list of songs. In the beginning, 
+we started off by creating an account on Genius and made an API client, which gave us a client ID, secret, and access token. 
+We began to look into Genius's Developer API Docs (https://docs.genius.com/) to see what exactly we could do with the Genius 
+API. Once we determined that we could not extract the lyrics solely by using the API (it appears to us that Genius currently 
+blocks people from accessing lyrics directly) we started looking into other options, like libraries. We considered multiple 
+libraries, but found that lyricsgenius was the best option for us mainly due to the ease of use. The lyricsgenius library is 
+the primary reason we decided to use Python instead of Java. There was more client-side abstraction, and the other library 
+(written in Java) that claimed to get lyrics from Genius had a far less detailed readme file and was harder to understand 
+and implement.
+
+Within our source code, there are many instances where we utilize dictionaries. The purpose of doing so is to make accessing 
+data (particularly the pair of song and artist names) easier. The process of organizing the song name and artist names in 
+dictionaries is a form of data abstraction that allows us to intuitively access them in our program. In the SongStats 
+class, we use dictionaries for each type of mood (happy, sad, neither) so we can easily store song/artist pairs. 
+In the WordClassifier class, we use one dictionary to store the mood-specific lyrics that indicate a sad/happy mood and a 
+second dictionary to directly pair every single lyric (value) with either "sad" or "happy" (key) to further simplify the 
+process of acccessing the mood of each lyric later in our code. We also used a dictionary for our hardcoded song/artist 
+collection. Dictionaries are a fundamental part of our code and serve a key purpose in organizing all of the information 
+we process in our program, including song titles, artist names, moods, and mood-specific words.
+
+The general code layout is broken down into several classes and functions for the purpose of improving readability and 
+avoiding repetition of code. We have two classes - SongStats and WordClassifier. SongStats contains the code that finds which 
+mood has the highest number of mood-specific lyrics from the given song and the print statements that show the full analysis 
+of the entered songs and their moods. WordClassifier has the the word bank of mood-specific lyrics and pairs each 
+mood-specific lyrics (values) with a happy/sad label (key). Both of these classes laid the groundwork for our program's 
+main function - analyze. The analyze function gets the actual lyrics of the given song from Genius, determines its mood 
+(using WordClassifier), and adds the song to the appropriate mood dictionary (SongStats). Overall, we were able to build a 
+more efficient program by splitting up our code into different classes and functions. 
+
+
+
